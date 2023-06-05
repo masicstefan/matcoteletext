@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: var(--secondary);
+}
+* {
+  color: #fff;
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: var(--primary);
+}
+
+/* page content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+main table {
+  max-width: 1000px;
+}
+
+main table th {
+  width: 300px;
+  align-self: last baseline;
+}
+
+main table td {
+  width: 600px;
+}
+
+/* help layout */
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.help-layout nav a {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover {
+  border-color: var(--primary);
+}
+.help-layout nav a:active{
+  background: var(--primary);
+}
+
+/* faq */
+.faq .question {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* MMC */
+.mmc input {
+  display: block;
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 60px;
+  color: var(--secondary);
+}
+
+/* Uporabniski vmesnik za novo novico. */
+form {
+  margin-top: 20px;
+}
+form input, form label, span, form textarea, form select {
+  display: block;
+}
+
+form input, form textarea, form select {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+select option {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+form label span {
+  margin-bottom: 5px;
+}
+
+
+/* Seznam novic */
+.novice {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+.novice > a {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.novice > a.hover p {
+  color: var(--primary);
+}
+.novice p{
+  margin: 0;
+}
+.novice > a p:last-child {
+  font-size: 0.8rem;
+  columns: #bbb;
+}
+.novice-detail {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 0;
+  width: 400px;
+  color: var(--secondary);
+}
+.novice-naziv {
+  color:#ff03dd;
+}
+.grid-novice-container { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 20px; 
+  width: 100%; 
+}
+.grid-novice-stevilka {
+  color: aqua;
+  margin: 10px;
+  text-align: left;
+}
+.grid-novice-kategorija {
+  color: aqua;
+  margin: 10px;
+  text-align: right;
+}
+
+/* MMC */
+.mmc {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 0;
+  width: 500px;
+  max-height: 700px;
+  color: var(--secondary);
+}
+/* mmc-novica ima fiksno višino height. */
+.mmc-novica {
+  display: flex;
+  overflow: hidden;
+  height: 300px;
+}
+.mmc-novicavreme {
+  display: block;
+  height: 280px;
+  margin-left: 20px;
+}
+.mmc-menu {
+  display: flex;
+  min-height: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  background: rgba(0,0,0,0.2);
+  margin-left: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.mmc-menu button {
+  background-color: transparent;
+  font-size: 16px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  justify-content: center;
+  margin: 5px;
+}
+.mmc-menu-kazalo {
+  color: red;
+}
+.mmc-menu-novice {
+  color: green;
+}
+.mmc-menu-vreme {
+  color: yellow;
+}
+.mmc-menu-tv {
+  color: cyan;
+}
+.mmc-novica-logo {
+  margin-top: 20px;
+}
+.mmc-novica-text {
+  margin-left: 20px;
+}
+.mmc-navigacija {
+  display: flex;
+  height: 60px;
+  background: rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 0;
+  color: var(--secondary);
+}
+.mmc-navigacija button {
+  height: 50px;
+  margin: 5px 5px;
+}
+.mmc-navigacija label {
+	float: right;
+  margin-top: 15px;
+  margin-left: 30px;
+  color: white;
+}
+.mmc-navigacija input {
+  height: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.mmc-noga {
+  display: inline;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.breadcrumbs > *{
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumbs .crumb:after {
+  content: ">";
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child::after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: #ddd;
+}
+
+/* Server stran. */
+.server {
+  margin-left: 10px;
+}
+.server-arhitektura {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-width: 7px;
+  border-style: outset;
+  border-color: cyan;
+  border-radius: 8px;
+}
+.server-erd {
+  margin-top: 30px;
+  margin-left: 20px;
+  border-width: 7px;
+  border-style: outset;
+  border-color: #ff03dd;
+  border-radius: 8px;
+}
+

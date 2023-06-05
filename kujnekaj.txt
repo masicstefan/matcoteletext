@@ -1,0 +1,4 @@
+          <div className="mmc-novica-text">
+            <p className="novice-naziv">{novica.nazivnovice}</p>
+            {novica.opisnovice}
+          </div>
