@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# MATCO Teletext
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DODAJ ...
 
 ## Available Scripts
 
