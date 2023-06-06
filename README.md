@@ -15,7 +15,12 @@ Podrejeno se funkcionalnost razširi z dodajanjem možnosti nastavitve delovnega
 ## Razvojno okolje
 Uporabljene so naslednje tehnologije: node.js, express, react, mySQL, Adobe Illustrator
 
-Aplikacijo zaženemo z ukazom `node index.js` ali ukazom `nodemon index.js`
+Aplikacijo zaženemo z ukazom `npm start`.
+
+## Odvisnosti
+Aplikacija je odvisna od podatkovne baze mySQL, ki teče (v razvojnem okolju) na naslovu: http://localhost:3001.
+
+Podatkovno bazo zaženemo z ukazom `npm run devstart`.
 
 ## Podatkovna baza
 Za potrebe podatkovne baze je uporabljen relacijski model, ki pa ne pokriva vseh potreb.
