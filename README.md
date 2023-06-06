@@ -1,70 +1,26 @@
-# MATCO Teletext
+## MATCO Teletext
 
-DODAJ ...
+Spletna stran imenovana **MATCO Teletekst** predstavlja simulacijo znane rešitve avtorja John Adamsa (1970). Storitev je prisotna v vseh velikih agencijah in televizijskih hišah (prva je CEEFAX, 1974) in predstavlja pravzaprav prvi interaktivni televizijski servis.
 
-## Available Scripts
+**Ideja** seminarske naloge je oblikovati kopijo funkcionalnosti *starejše sestre*, tako v obliki kot uporabi.
 
-In the project directory, you can run:
+Iz uporabniške perspektive je ideja naloge oblikovati aplikacijo, ki uporabniku ne bo nudila ničesar več kakor jo v osnovi nudi Teletekst sistem na analognih televizijah (npr. RTV Slo Teletext). Pri tem se bo iskanje in prikaz informacij omejilo zgolj na iskanje s pomočjo številk strani in s pomočjo štirih barvnih gumbov.
 
-### `npm start`
+Podrejeno se funkcionalnost razširi z dodajanjem možnosti nastavitve delovnega okolja: vklop iskalnika (Search), izbira različnih »retro« prikazov ter morebitna povezava z izbrano agencijsko hišo (npr. STA, ARSO) in vpeljavo sporočilnega sistema (npr. RabbitMQ).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Razširitev** aplikacije se nakazuje v oblikovanju primernega algoritma zamenjav novic kot je to primer v realnih izvedbah teletekst strani. Koncept novice sledi principu menjavanja glavnih novic v izbranem časovnem okviru (npr. vsake pol ure). Nova novica prevzame številko predhodne, obstoječa novica se pomakne v seznamu, zadnja novica se označi kot nevidna.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Oblikovni** princip sicer ni ključnega značaja za aplikacijo. Ne glede na to se bo aplikacija ukvarjala tudi z "retro" konceptom predstavitve (izbira primerne teletext pisave, uporaba zgolj majhne množice barv).
 
-### `npm test`
+## Razvojno okolje
+Uporabljene so naslednje tehnologije: node.js, express, react, mySQL, Adobe Illustrator
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aplikacijo zaženemo z ukazom `node index.js` ali ukazom `nodemon index.js`
 
-### `npm run build`
+## Podatkovna baza
+Za potrebe podatkovne baze bo uporabljen relacijski model ali model ključ-vrednost.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![ER diagram](https://user-images.githubusercontent.com/101993285/229517590-6c8db453-a990-45d7-bee3-abcb6e058eea.png)
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+>**MATCO logotip** predpona je dodano kot posvetilo priznanemu slovenskemu nožarju Mateju, umetniku med obrtniki njegovega stanu ter dolgoletnemu sponzorju avtorja.
