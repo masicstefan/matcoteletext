@@ -15,7 +15,7 @@ Podrejeno se funkcionalnost razširi z dodajanjem možnosti nastavitve delovnega
 ## Osnovni koncept
 Koncept sloni na rešitvi RTVSLO Teletext. Osnovne elemente in funkcionalnosti prikazuje naslednja shema.
 
-![ER diagram](https://user-images.githubusercontent.com/101993285/229517590-6c8db453-a990-45d7-bee3-abcb6e058eea.png)
+![Koncept](https://github.com/masicstefan/matcoteletext/assets/101993285/bd267bb3-2cbf-4ac3-b487-8580e33239c6)
 
 ## Razvojno okolje
 Uporabljene so naslednje tehnologije: node.js, express, react, mySQL, Adobe Illustrator
