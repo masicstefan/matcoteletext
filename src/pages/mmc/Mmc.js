@@ -12,8 +12,8 @@ export default function Mmc() {
 
     // Pridobimo prvo novico. Render naredimo samo enkrat, zato [].
     useEffect(() => {
-        // Runs ONCE after initial rendering
-        setNovica(novicaData[0]);
+      // Runs ONCE after initial rendering
+      setNovica(novicaData[0]);
       }, []);
     
     // Domov.
@@ -25,7 +25,24 @@ export default function Mmc() {
 
         // Definiramo prvo novico.
         setNovica(novicaData[0]);
-        setStevilkaNovice(100);
+        setKategorija(novicaData[0].oznakakategorije);
+        setStevilkaNovice(novicaData[0].stevilkanovice);
+      } catch {
+          // Pac ne vrnemo nic.
+          console.log("Ni podatkov, kaj češ!");
+      }
+    };
+
+    const getKazalo = async () => {
+      let res;
+      try {
+        res = await fetch(`http://localhost:3001/api/novice/106`);
+        const novicaData = await res.json();
+
+        // Definiramo prvo novico.
+        setNovica(novicaData[0]);
+        setKategorija(novicaData[0].oznakakategorije);
+        setStevilkaNovice(novicaData[0].stevilkanovice);
       } catch {
           // Pac ne vrnemo nic.
           console.log("Ni podatkov, kaj češ!");
@@ -33,7 +50,7 @@ export default function Mmc() {
     };
 
     // Vreme.
-    const getVreme = async () => {
+    const getNovicaVreme = async () => {
       let res;
       try {
         res = await fetch(`http://localhost:3001/api/novice/200`);
@@ -41,7 +58,8 @@ export default function Mmc() {
     
         // Definiramo prvo novico.
         setNovica(novicaData[0]);
-        setStevilkaNovice(200);
+        setKategorija(novicaData[0].oznakakategorije);
+        setStevilkaNovice(novicaData[0].stevilkanovice);
       } catch {
         // Pac ne vrnemo nic.
         console.log("Ni podatkov, kaj češ!");
@@ -50,7 +68,6 @@ export default function Mmc() {
     
     // Vrni izbrano novico, gumb Pojdi.
     const getNovica = async () => {
-      console.log("Po pritisku: ", stevilkanovice);
       const res = await fetch(`http://localhost:3001/api/novice/${stevilkanovice}`);
       const novicaData = await res.json();
 
@@ -58,6 +75,38 @@ export default function Mmc() {
       setNovica(novicaData[0]);
       setKategorija(novicaData[0].oznakakategorije);
     };
+
+    // Vrni izbrano novico, gumb Pojdi.
+    const getNovicaSport = async () => {
+      const res = await fetch(`http://localhost:3001/api/novice/500`);
+      const novicaData = await res.json();
+
+      // Definiramo prvo novico.
+      setNovica(novicaData[0]);
+      setKategorija(novicaData[0].oznakakategorije);
+      setStevilkaNovice(novicaData[0].stevilkanovice);
+    };
+
+    const getNovicaZadnja = async () => {
+      const res = await fetch(`http://localhost:3001/api/novice/101`);
+      const novicaData = await res.json();
+
+      // Definiramo prvo novico.
+      setNovica(novicaData[0]);
+      setKategorija(novicaData[0].oznakakategorije);
+      setStevilkaNovice(novicaData[0].stevilkanovice);
+    };
+
+    const getNovicaTv = async () => {
+      const res = await fetch(`http://localhost:3001/api/novice/800`);
+      const novicaData = await res.json();
+
+      // Definiramo prvo novico.
+      setNovica(novicaData[0]);
+      setKategorija(novicaData[0].oznakakategorije);
+      setStevilkaNovice(novicaData[0].stevilkanovice);
+    };
+
 
     // Vrni naslednjo  novico, gumb Naslednja.
     const getNaslednjaNovica = async () => {
@@ -127,7 +176,35 @@ export default function Mmc() {
       return(
         <div className="mmc-novica">
           <p></p>
+          <div className="mmc-novica-logo">
+            <Logo />
+          </div>
+          <div className="mmc-novica-text">
+            <p className="novice-naziv">{novica.nazivnovice}</p>
+            {novica.opisnovice}
+          </div>
+        </div>
+      );
+    };
 
+    function Kazalo() {
+      return(
+        <div className="mmc-novicavreme">
+          <div className="mmc-novica-logo">
+            <Logo />
+          </div>
+          <div className="mmc-novica-text">
+            <p className="novice-naziv">Šport -------- 500</p>
+            <p className="novice-naziv">Šport -------- 500</p>
+            <p className="novice-naziv">Šport -------- 500</p>
+          </div>
+        </div>
+      );
+    };
+
+    function NovicaKazalo() {
+      return(
+        <div className="mmc-novicavreme">
           <div className="mmc-novica-logo">
             <Logo />
           </div>
@@ -168,24 +245,13 @@ export default function Mmc() {
       );
     };
 
-    function MenuVreme() {
-      setStevilkaNovice(200);
-      getNovica();
-    };
-
-    function MenuTv() {
-      setStevilkaNovice(800);
-      getNovica();
-      console.log("Po meniju: ", stevilkanovice);
-    }
-
     function Menu() {
       return(
         <div className="mmc-menu">
-          <button className="mmc-menu-kazalo" onClick={getDomov}>KAZALO</button>
-          <button className="mmc-menu-novice" onClick={getVreme}>NOVICE</button>
-          <button className="mmc-menu-vreme" onClick={MenuVreme}>VREME</button>
-          <button className="mmc-menu-tv" onClick={MenuTv}>TV-PROGRAMI</button>
+          <button className="mmc-menu-kazalo" onClick={getKazalo}>KAZALO</button>
+          <button className="mmc-menu-novice" onClick={getDomov}>NOVICE</button>
+          <button className="mmc-menu-vreme" onClick={getNovicaVreme}>VREME</button>
+          <button className="mmc-menu-tv" onClick={getNovicaTv}>TV-PROGRAMI</button>
         </div>
       );
     };
@@ -210,18 +276,20 @@ export default function Mmc() {
     function Noga() {
       return(
         <div className="mmc-noga">
-            <p><a href='http://localhost:3000/mmc'>Novice</a></p>
-            <p><a href='http://localhost:3000/mmc'>Vreme</a>   (Na kratko, SLO, Svet, Zrak, Vode)</p>
-            <p>Šport (Nogomet, Košarka, Rokomet, Tenis)</p>
-            <p>Kultura</p>
-            <p>Zabava (Šale, Vici)</p>
-            <p>TV (TVSLO1, TVSLO2, TVSLO3)</p>
-            <p>Radio (VAL202, ARS, Maribor)</p>
+            <button onClick={getNovicaZadnja}>Zadnja novica</button>
+            <span></span>
+            <button onClick={getNovicaVreme}>Vreme (Na kratko, SLO, Svet, Zrak, Vode)</button>
+            <span></span>
+            <button onClick={getNovicaSport}>Šport (Nogomet, Košarka, Rokomet, Tenis)</button>
+            <span></span>
+            <button onClick={getNovicaTv}>TV (TVSLO1, TVSLO2, TVSLO3)</button>
         </div>
       );
     };
 
     function PrikazNovice() {
+
+      
       let intKategorija = stevilkanovice;
 
       if (intKategorija >= 200 && intKategorija < 300) {
@@ -241,13 +309,13 @@ export default function Mmc() {
 
     // GLAVNI RENDER.
     return (
-      <div className="mmc">
-        <PrikazNovice />
-        <Menu />
-        <Navigacija />
-        <Noga />
-      </div>
-    );
+        <div className="mmc">
+          <PrikazNovice />
+          <Menu />
+          <Navigacija />
+          <Noga />
+        </div>
+      );
 };
 
 // Loader funkcija

@@ -129,7 +129,6 @@ form label span {
   margin-bottom: 5px;
 }
 
-
 /* Seznam novic */
 .novice {
   background: rgba(0,0,0,0.2);
@@ -272,13 +271,15 @@ form label span {
   margin-right: 5px;
 }
 .mmc-noga {
-  display: inline;
-  font-size: 14px;
-  font-weight: bold;
   color: white;
   margin-left: 10px;
 }
-
+.mmc-noga button {
+  background: rgba(0,0,0,0);
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
 
 /* breadcrumbs */
 .breadcrumbs {

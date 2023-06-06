@@ -42,6 +42,8 @@ export default function Client() {
             <li>Kroženje med podnovicami</li>
             <li>Obvestilo o zadnji posodobitvi na nivoju vsake novice</li>
             <li>F1 (pomoč)</li>
+            <li>Sprememba obstoječe novice</li>
+            <li>Arhiviranje novic</li>
             <p></p>
 
             <h4>Ocena izvedbe</h4>
