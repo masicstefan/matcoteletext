@@ -12,6 +12,11 @@ Podrejeno se funkcionalnost razširi z dodajanjem možnosti nastavitve delovnega
 
 **Oblikovni** princip sicer ni ključnega značaja za aplikacijo. Ne glede na to se bo aplikacija ukvarjala tudi z "retro" konceptom predstavitve (izbira primerne teletext pisave, uporaba zgolj majhne množice barv).
 
+## Osnovni koncept
+Koncept sloni na rešitvi RTVSLO Teletext. Osnovne elemente in funkcionalnosti prikazuje naslednja shema.
+
+![ER diagram](https://user-images.githubusercontent.com/101993285/229517590-6c8db453-a990-45d7-bee3-abcb6e058eea.png)
+
 ## Razvojno okolje
 Uporabljene so naslednje tehnologije: node.js, express, react, mySQL, Adobe Illustrator
 
