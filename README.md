@@ -18,7 +18,8 @@ Uporabljene so naslednje tehnologije: node.js, express, react, mySQL, Adobe Illu
 Aplikacijo zaženemo z ukazom `node index.js` ali ukazom `nodemon index.js`
 
 ## Podatkovna baza
-Za potrebe podatkovne baze bo uporabljen relacijski model ali model ključ-vrednost.
+Za potrebe podatkovne baze je uporabljen relacijski model, ki pa ne pokriva vseh potreb.
+Vsled tega se predvideva v naslednji verziji uporaba GraphQL.
 
 ![ER diagram](https://user-images.githubusercontent.com/101993285/229517590-6c8db453-a990-45d7-bee3-abcb6e058eea.png)
 <br>
