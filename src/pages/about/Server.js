@@ -26,6 +26,7 @@ export default function Server() {
             <h4>Podatkovni model</h4>
             <li>ER diagram</li>
             <img className="server-erd" src={erd} alt='ERD'/>
+
         </div>
     )
 };
