@@ -27,6 +27,7 @@ export default function Client() {
 
             <h4>Uporabljena tehnologija</h4>
             <li>HTML, CSS, JavaScript, React: Axios, NavLink, Outlet</li>
+            <li>Git</li>
             <li>Adobe Illustrator</li>
             <p></p>
 

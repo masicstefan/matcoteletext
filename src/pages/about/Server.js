@@ -19,8 +19,8 @@ export default function Server() {
             <p></p>
             
             <h4>Uporabljena tehnologija</h4>
-            <li>Express</li>
-            <li>MySQL Server</li>
+            <li>Express, MySQL Server</li>
+            <li>Git</li>
             <p></p>
 
             <h4>Podatkovni model</h4>
